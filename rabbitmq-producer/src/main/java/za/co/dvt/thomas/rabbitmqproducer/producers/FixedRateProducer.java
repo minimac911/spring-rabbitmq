@@ -16,11 +16,12 @@ public class FixedRateProducer {
     public FixedRateProducer(final RabbitTemplate rabbitTemplate) {
         this.rabbitTemplate = rabbitTemplate;
     }
-
+u
 
     @Scheduled(fixedRate = 500)
-    public void sendMessage(String message){
-        log.info("Fixed rate message sent: %s".formatted(message));
-        rabbitTemplate.convertAndSend("course.fixedrate", message);
+    public void sendMessage(){
+        i++;
+        log.info("Fixed rate message sent: %s".formatted(i));
+        rabbitTemplate.convertAndSend("course.fixedrate", i);
     }
 }
