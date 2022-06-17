@@ -1,7 +1,7 @@
 package za.co.dvt.thomas.rabbitmqproducer;
 
 import za.co.dvt.thomas.rabbitmqproducer.entity.Employee;
-import za.co.dvt.thomas.rabbitmqproducer.producers.EmployeeJsonProducer;
+import za.co.dvt.thomas.rabbitmqproducer.producers.HumanResourcesProducer;
 
 import java.time.LocalDate;
 
@@ -14,10 +14,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 @Log4j2
 public class RabbitmqProducerApplication implements CommandLineRunner {
-	private EmployeeJsonProducer producer;
+	private HumanResourcesProducer producer;
 
 	@Autowired
-	public RabbitmqProducerApplication(final EmployeeJsonProducer producer) {
+	public RabbitmqProducerApplication(final HumanResourcesProducer producer) {
 		this.producer = producer;
 	}
 
